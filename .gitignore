@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# Vite cache
+.vite/
+
+# Environment & secrets
+.env
+.env.*
+*.local
+
+# Firebase service keys (keep only the public web config in firebase-config.js)
+serviceAccountKey*.json
+firebase-adminsdk*.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

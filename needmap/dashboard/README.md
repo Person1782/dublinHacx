@@ -1,32 +1,27 @@
-# React + TypeScript + Vite
+# NeedMap Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+The map view for organizations — where anonymous community signals become visible patterns. Consumes the `incomingSignals` Firestore collection written by the [community-site form](../community-site/) and renders reports as markers on a shared map.
 
-Currently, two official plugins are available:
+**Status: in progress.** Scaffolded on React 19 + TypeScript + Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features (planned)
 
-## React Compiler
+- Live map of anonymous service-access signals
+- Category and urgency filtering
+- Hotspot clustering / density view per category
+- Read-only views for local service organizations
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Development
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev      # Vite dev server
+npm run build    # type-check + production build
+npm run lint     # Oxlint
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Stack
+
+- [React 19](https://react.dev) + [TypeScript](https://www.typescriptlang.org)
+- [Vite 8](https://vite.dev) (with Oxc-powered plugin)
+- [Oxlint](https://oxc.rs) for linting
