@@ -2,7 +2,6 @@
 
 NeedMap helps community members anonymously report local service-access needs, and gives organizers a dashboard to view, prioritize, and respond to them — all in one place.
 
-Live demo: [dublin-hacx-five.vercel.app](https://dublin-hacx-five.vercel.app)
 
 ## The problem
 
