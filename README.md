@@ -45,9 +45,7 @@ needmap/dashboard/     # Organizer dashboard (React 19 + TypeScript + Vite) — 
 
 Static site — no build step:
 
-```
-use Live Server to run the form page      
-```
+  Use Live Server to run the form page      
 
 ### needmap/dashboard (the map view)
 
