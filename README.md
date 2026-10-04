@@ -45,9 +45,8 @@ needmap/dashboard/     # Organizer dashboard (React 19 + TypeScript + Vite) — 
 
 Static site — no build step:
 
-```bash
-cd community-site
-npx serve .          # or just open index.html in a browser
+```
+use Live Server to run the form page      
 ```
 
 ### needmap/dashboard (the map view)
