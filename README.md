@@ -50,7 +50,7 @@ Static site — no build step:
 ### needmap/dashboard (the map view)
 
 ```bash
-cd needmap/dashboard
+cd Dublin_Hacx
 npm install
 npm run dev
 ```
