@@ -1,0 +1,81 @@
+:root {
+  color: #19352f;
+  background: #f4f6f2;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { min-width: 320px; margin: 0; }
+
+.topbar {
+  display: flex;
+  min-height: 92px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 28px;
+  background: #fff;
+  border-bottom: 1px solid #dce5df;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: #55746a;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 { margin: 0; font-size: clamp(1.4rem, 4vw, 2rem); letter-spacing: -0.035em; }
+.status-wrap { display: flex; align-items: center; gap: 8px; color: #5e726b; font-size: 0.88rem; }
+.live-dot { width: 9px; height: 9px; background: #c28a2d; border-radius: 50%; }
+.live-dot.connected { background: #23845d; }
+.live-dot.error { background: #bb493f; }
+
+main { position: relative; height: calc(100% - 92px); min-height: 420px; }
+#map { width: 100%; height: 100%; background: #dfe7df; }
+
+.summary-card {
+  position: absolute;
+  z-index: 500;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  min-width: 130px;
+  gap: 2px;
+  padding: 14px 16px;
+  background: rgb(255 255 255 / 94%);
+  border: 1px solid #d7e1da;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgb(20 55 42 / 13%);
+}
+
+.summary-card strong { font-size: 1.45rem; }
+.summary-card span { color: #65776f; font-size: 0.8rem; }
+.signal-marker { border: 2px solid #fff; box-shadow: 0 2px 9px rgb(0 0 0 / 35%); }
+.signal-popup { min-width: 170px; }
+.signal-popup strong { display: block; margin-bottom: 5px; text-transform: capitalize; }
+.signal-popup p { margin: 5px 0 0; line-height: 1.4; }
+.signal-popup small { color: #617169; text-transform: capitalize; }
+.signal-popup dl { display: grid; grid-template-columns: auto 1fr; gap: 3px 9px; margin: 10px 0 0; font-size: 0.76rem; }
+.signal-popup dt { color: #6a7b74; font-weight: 700; }
+.signal-popup dd { margin: 0; color: #344a42; }
+.leaflet-tooltip.signal-hover-card {
+  padding: 11px 13px;
+  color: #19352f;
+  background: rgb(255 255 255 / 98%);
+  border: 1px solid #cad9d0;
+  border-radius: 9px;
+  box-shadow: 0 7px 22px rgb(20 55 42 / 20%);
+}
+.leaflet-tooltip-top.signal-hover-card::before { border-top-color: #cad9d0; }
+
+@media (max-width: 560px) {
+  .topbar { min-height: 82px; padding: 16px; }
+  .status-wrap { max-width: 130px; text-align: right; }
+  main { height: calc(100% - 82px); }
+  .summary-card { top: 10px; right: 10px; min-width: 108px; padding: 10px 12px; }
+}

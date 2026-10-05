@@ -31,29 +31,45 @@ Community needs — food support, supplies, transportation, emergency assistance
 ## Repository structure
 
 ```
-community-site/        # Anonymous reporting form (vanilla HTML/CSS/JS + Firebase)
+comForm/               # Anonymous reporting form (vanilla HTML/CSS/JS + Firebase)
   index.html           # Form UI
   app.js               # Validation, PII filter, grid geolocation, Firestore writes
   firebase-config.js   # Firebase web config (client-side by design)
   styles.css
-needmap/dashboard/     # Organizer dashboard (React 19 + TypeScript + Vite) — in progress
+mapSite/               # Separate live map (vanilla HTML/CSS/JS + Firebase + Leaflet)
+  index.html           # Standalone map page
+  app.js               # Firestore listener and Leaflet markers
+  firebase-config.js   # Its own Firebase web config
+  styles.css
 ```
 
 ## Quick start
 
-### community-site (the form)
+The form and map are independent websites. They have separate dependencies,
+development servers, builds, and deployment roots. Their only shared system is
+the Firebase `incomingSignals` collection.
 
-Static site — no build step:
-
-  Use Live Server to run the form page      
-
-### needmap/dashboard (the map view)
+### comForm (the form)
 
 ```bash
-cd dublinHacx/Dublin_Hacx
+cd comForm
 npm install
 npm run dev
 ```
+
+Open `http://127.0.0.1:5173/`.
+
+### mapSite (the map view)
+
+In a separate terminal:
+
+```bash
+cd mapSite
+npm install
+npm run dev
+```
+
+Open `http://127.0.0.1:5174/`.
 
 ## Data model
 
@@ -74,13 +90,13 @@ Reports are written to the `incomingSignals` Firestore collection:
 
 ## Tech stack
 
-- **community-site** — HTML, CSS, JavaScript, Firebase (Auth + Firestore)
-- **needmap/dashboard** — React, TypeScript, Vite
+- **comForm** — HTML, CSS, JavaScript, Firebase (Auth + Firestore)
+- **mapSite** — HTML, CSS, JavaScript, Firebase Firestore, Leaflet, OpenStreetMap
 - **Hosting** — Vercel
 
 ## Roadmap
 
-- [ ] Live map dashboard consuming `incomingSignals`
+- [x] Live map dashboard consuming `incomingSignals`
 - [ ] Signal clustering and hotspot/heat layers per category
 - [ ] Read-only organization accounts
 - [ ] Trend alerts when a grid cell heats up fast

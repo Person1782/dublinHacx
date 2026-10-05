@@ -18,6 +18,7 @@ body {
 
 button,
 input,
+input,
 select,
 textarea {
   font: inherit;
@@ -134,6 +135,7 @@ textarea {
   resize: vertical;
 }
 
+input:focus,
 select:focus,
 textarea:focus,
 button:focus-visible {

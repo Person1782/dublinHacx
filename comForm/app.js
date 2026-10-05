@@ -168,12 +168,17 @@ form.addEventListener("submit", async (event) => {
     return;
   }
 
-  const hasManualCoordinates =
+  if (!summary) {
+    setStatus("Add a brief description before submitting.", "error");
+    return;
+  }
+
+  const hasCoordinates =
     latitudeInput.value.trim() !== "" || longitudeInput.value.trim() !== "";
 
   let location;
 
-  if (hasManualCoordinates) {
+  if (hasCoordinates) {
     if (!isValidLocation(manualLatitude, manualLongitude)) {
       setStatus(
         "Enter a valid latitude (-90 to 90) and longitude (-180 to 180).",
@@ -182,12 +187,18 @@ form.addEventListener("submit", async (event) => {
       return;
     }
 
-    location = {
-      latitude: manualLatitude,
-      longitude: manualLongitude,
-      gridId: `manual-${manualLatitude.toFixed(4)}-${manualLongitude.toFixed(4)}`,
-      precision: "manual_demo_coordinate",
-    };
+    const matchesSelectedLocation =
+      selectedLocation.latitude === manualLatitude &&
+      selectedLocation.longitude === manualLongitude;
+
+    location = matchesSelectedLocation
+      ? selectedLocation
+      : {
+          latitude: manualLatitude,
+          longitude: manualLongitude,
+          gridId: `manual-${manualLatitude.toFixed(4)}-${manualLongitude.toFixed(4)}`,
+          precision: "manual_demo_coordinate",
+        };
   } else if (
     selectedLocation.latitude !== null &&
     selectedLocation.longitude !== null
