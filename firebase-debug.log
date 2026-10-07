@@ -1,0 +1,425 @@
+[debug] [2026-10-06T16:34:13.615Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T16:34:13.617Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase projects:list --json
+[debug] [2026-10-06T16:34:13.617Z] CLI Version:   15.32.1
+[debug] [2026-10-06T16:34:13.617Z] Platform:      darwin
+[debug] [2026-10-06T16:34:13.617Z] Node Version:  v24.21.0
+[debug] [2026-10-06T16:34:13.617Z] Detected Agent: codex_cli
+[debug] [2026-10-06T16:34:13.617Z] Time:          Tue Oct 06 2026 09:34:13 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T16:34:13.617Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-06T16:34:13.624Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2026-10-06T16:34:13.634Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T16:34:13.634Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[debug] [2026-10-06T16:34:13.635Z] Checked if tokens are valid: false, expires at: 1791066635833
+[debug] [2026-10-06T16:34:13.635Z] Checked if tokens are valid: false, expires at: 1791066635833
+[debug] [2026-10-06T16:34:13.636Z] > refreshing access token with scopes: []
+[debug] [2026-10-06T16:34:13.637Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-10-06T16:34:13.637Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-10-06T16:34:13.860Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-10-06T16:34:13.860Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-10-06T16:34:13.871Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2026-10-06T16:34:13.883Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2026-10-06T16:34:13.883Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2026-10-06T16:34:14.438Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2026-10-06T16:34:14.438Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] ┌──────────────────────┬───────────────────┬────────────────┬──────────────────────┐
+│ Project Display Name │ Project ID        │ Project Number │ Resource Location ID │
+├──────────────────────┼───────────────────┼────────────────┼──────────────────────┤
+│ needmap-hackathon    │ needmap-hackathon │ 385002157682   │ [Not specified]      │
+└──────────────────────┴───────────────────┴────────────────┴──────────────────────┘
+[info] 
+[info] 1 project(s) total.
+[debug] [2026-10-06T16:35:13.123Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T16:35:13.125Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase experiments:enable ailogic
+[debug] [2026-10-06T16:35:13.125Z] CLI Version:   15.32.1
+[debug] [2026-10-06T16:35:13.125Z] Platform:      darwin
+[debug] [2026-10-06T16:35:13.126Z] Node Version:  v24.21.0
+[debug] [2026-10-06T16:35:13.126Z] Detected Agent: codex_cli
+[debug] [2026-10-06T16:35:13.126Z] Time:          Tue Oct 06 2026 09:35:13 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T16:35:13.126Z] ----------------------------------------------------------------------
+[debug] 
+[info] Enabled experiment ailogic
+[debug] [2026-10-06T16:35:19.597Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T16:35:19.599Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase ailogic:providers:enable gemini-developer-api --project needmap-hackathon --non-interactive
+[debug] [2026-10-06T16:35:19.599Z] CLI Version:   15.32.1
+[debug] [2026-10-06T16:35:19.599Z] Platform:      darwin
+[debug] [2026-10-06T16:35:19.599Z] Node Version:  v24.21.0
+[debug] [2026-10-06T16:35:19.600Z] Detected Agent: codex_cli
+[debug] [2026-10-06T16:35:19.600Z] Time:          Tue Oct 06 2026 09:35:19 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T16:35:19.600Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-06T16:35:19.603Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T16:35:19.604Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[debug] [2026-10-06T16:35:19.604Z] [iam] checking project needmap-hackathon for permissions ["firebase.projects.get","firebasevertexai.config.update","serviceusage.services.enable"]
+[debug] [2026-10-06T16:35:19.610Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:19.611Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:19.611Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions [none]
+[debug] [2026-10-06T16:35:19.611Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions  x-goog-user-project=needmap-hackathon
+[debug] [2026-10-06T16:35:19.611Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions {"permissions":["firebase.projects.get","firebasevertexai.config.update","serviceusage.services.enable"]}
+[debug] [2026-10-06T16:35:19.796Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions 400
+[debug] [2026-10-06T16:35:19.796Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions {"error":{"code":400,"message":"Permission firebasevertexai.config.update is not valid for this resource.","status":"INVALID_ARGUMENT"}}
+[debug] [2026-10-06T16:35:19.797Z] [iam] error while checking permissions, command may fail: Request to https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions had HTTP Error: 400, Permission firebasevertexai.config.update is not valid for this resource.
+[info] i  ailogic: ensuring required API firebasevertexai.googleapis.com is enabled... 
+[debug] [2026-10-06T16:35:19.798Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:19.798Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:19.798Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/firebasevertexai.googleapis.com [none]
+[debug] [2026-10-06T16:35:19.798Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/firebasevertexai.googleapis.com  x-goog-user-project=needmap-hackathon
+[debug] [2026-10-06T16:35:20.324Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/firebasevertexai.googleapis.com 200
+[debug] [2026-10-06T16:35:20.325Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/firebasevertexai.googleapis.com [omitted]
+[warn] ⚠  ailogic: missing required API firebasevertexai.googleapis.com. Enabling now... 
+[debug] [2026-10-06T16:35:20.326Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:20.326Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:20.326Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/firebasevertexai.googleapis.com:enable [none]
+[debug] [2026-10-06T16:35:20.326Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/firebasevertexai.googleapis.com:enable  x-goog-user-project=needmap-hackathon
+[debug] [2026-10-06T16:35:20.574Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/firebasevertexai.googleapis.com:enable 200
+[debug] [2026-10-06T16:35:20.575Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/firebasevertexai.googleapis.com:enable [omitted]
+[info] i  ailogic: ensuring required API generativelanguage.googleapis.com is enabled... 
+[debug] [2026-10-06T16:35:30.594Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:30.594Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:30.594Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/generativelanguage.googleapis.com [none]
+[debug] [2026-10-06T16:35:30.594Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/generativelanguage.googleapis.com  x-goog-user-project=needmap-hackathon
+[debug] [2026-10-06T16:35:31.253Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/generativelanguage.googleapis.com 200
+[debug] [2026-10-06T16:35:31.254Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/generativelanguage.googleapis.com [omitted]
+[warn] ⚠  ailogic: missing required API generativelanguage.googleapis.com. Enabling now... 
+[debug] [2026-10-06T16:35:31.254Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:31.254Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:31.254Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/generativelanguage.googleapis.com:enable [none]
+[debug] [2026-10-06T16:35:31.254Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/generativelanguage.googleapis.com:enable  x-goog-user-project=needmap-hackathon
+[debug] [2026-10-06T16:35:31.770Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/generativelanguage.googleapis.com:enable 200
+[debug] [2026-10-06T16:35:31.770Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/generativelanguage.googleapis.com:enable [omitted]
+[info] Successfully enabled provider: gemini-developer-api
+[debug] [2026-10-06T16:35:52.046Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T16:35:52.049Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase ailogic:providers:list --project needmap-hackathon
+[debug] [2026-10-06T16:35:52.049Z] CLI Version:   15.32.1
+[debug] [2026-10-06T16:35:52.049Z] Platform:      darwin
+[debug] [2026-10-06T16:35:52.049Z] Node Version:  v24.21.0
+[debug] [2026-10-06T16:35:52.049Z] Detected Agent: codex_cli
+[debug] [2026-10-06T16:35:52.049Z] Time:          Tue Oct 06 2026 09:35:52 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T16:35:52.049Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-06T16:35:52.053Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T16:35:52.053Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[debug] [2026-10-06T16:35:52.053Z] [iam] checking project needmap-hackathon for permissions ["firebase.projects.get","serviceusage.services.get"]
+[debug] [2026-10-06T16:35:52.060Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:52.060Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:52.061Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions [none]
+[debug] [2026-10-06T16:35:52.061Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions  x-goog-user-project=needmap-hackathon
+[debug] [2026-10-06T16:35:52.061Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions {"permissions":["firebase.projects.get","serviceusage.services.get"]}
+[debug] [2026-10-06T16:35:52.287Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions 200
+[debug] [2026-10-06T16:35:52.287Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions {"permissions":["firebase.projects.get","serviceusage.services.get"]}
+[debug] [2026-10-06T16:35:52.288Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:52.288Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:52.288Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/aiplatform.googleapis.com [none]
+[debug] [2026-10-06T16:35:52.288Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/aiplatform.googleapis.com  x-goog-user-project=needmap-hackathon
+[debug] [2026-10-06T16:35:52.962Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/aiplatform.googleapis.com 200
+[debug] [2026-10-06T16:35:52.962Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/aiplatform.googleapis.com [omitted]
+[info] ┌───────────────────────────┬──────────┐
+│ Provider                  │ Status   │
+├───────────────────────────┼──────────┤
+│ gemini-developer-api      │ Enabled  │
+├───────────────────────────┼──────────┤
+│ gemini-agent-platform-api │ Disabled │
+└───────────────────────────┴──────────┘
+[debug] [2026-10-06T16:35:54.167Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T16:35:54.169Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase apps:list --project needmap-hackathon --json
+[debug] [2026-10-06T16:35:54.169Z] CLI Version:   15.32.1
+[debug] [2026-10-06T16:35:54.169Z] Platform:      darwin
+[debug] [2026-10-06T16:35:54.169Z] Node Version:  v24.21.0
+[debug] [2026-10-06T16:35:54.169Z] Detected Agent: codex_cli
+[debug] [2026-10-06T16:35:54.169Z] Time:          Tue Oct 06 2026 09:35:54 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T16:35:54.169Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-06T16:35:54.174Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T16:35:54.174Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[debug] [2026-10-06T16:35:54.181Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:54.181Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:35:54.182Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/needmap-hackathon:searchApps pageSize=100
+[debug] [2026-10-06T16:35:54.403Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/needmap-hackathon:searchApps 200
+[debug] [2026-10-06T16:35:54.403Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/needmap-hackathon:searchApps {"apps":[{"name":"projects/needmap-hackathon/webApps/1:385002157682:web:3296ba12f9bd711ae0f4eb","displayName":"NeedMap Community","platform":"WEB","appId":"1:385002157682:web:3296ba12f9bd711ae0f4eb","namespace":"MzRhODBjOTMtYjQ3ZS00ZjgwLTk2OGYtNjU3YjdkMGQ0OTll","apiKeyId":"078669f5-d64a-41b0-8ecc-d3fae8bcfcdc","state":"ACTIVE","expireTime":"1970-01-01T00:00:00Z"}]}
+[info] ┌───────────────────┬───────────────────────────────────────────┬──────────┐
+│ App Display Name  │ App ID                                    │ Platform │
+├───────────────────┼───────────────────────────────────────────┼──────────┤
+│ NeedMap Community │ 1:385002157682:web:3296ba12f9bd711ae0f4eb │ WEB      │
+└───────────────────┴───────────────────────────────────────────┴──────────┘
+[info] 
+[info] 1 app(s) total.
+[debug] [2026-10-06T16:36:04.835Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T16:36:04.838Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase experiments:enable appcheckadmin
+[debug] [2026-10-06T16:36:04.838Z] CLI Version:   15.32.1
+[debug] [2026-10-06T16:36:04.838Z] Platform:      darwin
+[debug] [2026-10-06T16:36:04.838Z] Node Version:  v24.21.0
+[debug] [2026-10-06T16:36:04.838Z] Detected Agent: codex_cli
+[debug] [2026-10-06T16:36:04.839Z] Time:          Tue Oct 06 2026 09:36:04 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T16:36:04.839Z] ----------------------------------------------------------------------
+[debug] 
+[info] Enabled experiment appcheckadmin
+[debug] [2026-10-06T16:36:13.422Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T16:36:13.425Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase appcheck:services:list --project needmap-hackathon
+[debug] [2026-10-06T16:36:13.425Z] CLI Version:   15.32.1
+[debug] [2026-10-06T16:36:13.425Z] Platform:      darwin
+[debug] [2026-10-06T16:36:13.425Z] Node Version:  v24.21.0
+[debug] [2026-10-06T16:36:13.425Z] Detected Agent: codex_cli
+[debug] [2026-10-06T16:36:13.425Z] Time:          Tue Oct 06 2026 09:36:13 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T16:36:13.425Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-06T16:36:13.430Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T16:36:13.430Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[debug] [2026-10-06T16:36:13.430Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T16:36:13.430Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[debug] [2026-10-06T16:36:13.430Z] [iam] checking project needmap-hackathon for permissions ["firebase.projects.get","firebaseappcheck.services.get"]
+[debug] [2026-10-06T16:36:13.437Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:13.437Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:13.437Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions [none]
+[debug] [2026-10-06T16:36:13.437Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions  x-goog-user-project=needmap-hackathon
+[debug] [2026-10-06T16:36:13.437Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions {"permissions":["firebase.projects.get","firebaseappcheck.services.get"]}
+[debug] [2026-10-06T16:36:13.674Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions 200
+[debug] [2026-10-06T16:36:13.674Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions {"permissions":["firebase.projects.get","firebaseappcheck.services.get"]}
+[debug] [2026-10-06T16:36:13.675Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:13.676Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:13.676Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2026-10-06T16:36:13.676Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/cloudresourcemanager.googleapis.com  x-goog-user-project=needmap-hackathon
+[debug] [2026-10-06T16:36:14.130Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/cloudresourcemanager.googleapis.com 200
+[debug] [2026-10-06T16:36:14.130Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/needmap-hackathon/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2026-10-06T16:36:14.139Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:14.139Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:14.139Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon [none]
+[debug] [2026-10-06T16:36:14.268Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon 200
+[debug] [2026-10-06T16:36:14.268Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon {"projectNumber":"385002157682","projectId":"needmap-hackathon","lifecycleState":"ACTIVE","name":"needmap-hackathon","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-10-03T21:54:19.565Z"}
+[debug] [2026-10-06T16:36:14.271Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:14.271Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:14.272Z] >>> [apiv2][query] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/services 
+[debug] [2026-10-06T16:36:14.632Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T16:36:14.634Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase appcheck:providers:list --project needmap-hackathon
+[debug] [2026-10-06T16:36:14.634Z] CLI Version:   15.32.1
+[debug] [2026-10-06T16:36:14.634Z] Platform:      darwin
+[debug] [2026-10-06T16:36:14.634Z] Node Version:  v24.21.0
+[debug] [2026-10-06T16:36:14.634Z] Detected Agent: codex_cli
+[debug] [2026-10-06T16:36:14.635Z] Time:          Tue Oct 06 2026 09:36:14 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T16:36:14.635Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-06T16:36:14.640Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T16:36:14.640Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[debug] [2026-10-06T16:36:14.640Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T16:36:14.640Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[debug] [2026-10-06T16:36:14.640Z] [iam] checking project needmap-hackathon for permissions ["firebase.projects.get","firebaseappcheck.appAttestConfig.get","firebaseappcheck.deviceCheckConfig.get","firebaseappcheck.playIntegrityConfig.get","firebaseappcheck.recaptchaEnterpriseConfig.get","firebaseappcheck.recaptchaV3Config.get"]
+[debug] [2026-10-06T16:36:14.646Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:14.646Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:14.647Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions [none]
+[debug] [2026-10-06T16:36:14.647Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions  x-goog-user-project=needmap-hackathon
+[debug] [2026-10-06T16:36:14.647Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions {"permissions":["firebase.projects.get","firebaseappcheck.appAttestConfig.get","firebaseappcheck.deviceCheckConfig.get","firebaseappcheck.playIntegrityConfig.get","firebaseappcheck.recaptchaEnterpriseConfig.get","firebaseappcheck.recaptchaV3Config.get"]}
+[debug] [2026-10-06T16:36:14.684Z] <<< [apiv2][status] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/services 200
+[debug] [2026-10-06T16:36:14.684Z] <<< [apiv2][body] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/services {}
+[info] ┌─────────────┬────────────────────────────┬─────────────┬───────────────────┬─────────┐
+│ Service     │ Service API                │ Enforcement │ Replay Protection │ Updated │
+├─────────────┼────────────────────────────┼─────────────┼───────────────────┼─────────┤
+│ ailogic     │ Firebase AI Logic          │ Off         │ Off               │ never   │
+├─────────────┼────────────────────────────┼─────────────┼───────────────────┼─────────┤
+│ auth        │ Firebase Authentication    │ Off         │ Off               │ never   │
+├─────────────┼────────────────────────────┼─────────────┼───────────────────┼─────────┤
+│ database    │ Firebase Realtime Database │ Off         │ Off               │ never   │
+├─────────────┼────────────────────────────┼─────────────┼───────────────────┼─────────┤
+│ dataconnect │ Firebase SQL Connect       │ Off         │ Off               │ never   │
+├─────────────┼────────────────────────────┼─────────────┼───────────────────┼─────────┤
+│ firestore   │ Cloud Firestore            │ Off         │ Off               │ never   │
+├─────────────┼────────────────────────────┼─────────────┼───────────────────┼─────────┤
+│ storage     │ Cloud Storage for Firebase │ Off         │ Off               │ never   │
+└─────────────┴────────────────────────────┴─────────────┴───────────────────┴─────────┘
+[warn] ⚠  App Check is not enforced for ailogic. Starting November 2, 2026, Firebase will automatically enforce App Check for all Gemini API requests via Firebase AI Logic. Requests without a valid App Check token will be rejected. Implement App Check before this date to avoid service interruptions: https://firebase.google.com/docs/ai-logic/app-check 
+[debug] [2026-10-06T16:36:14.800Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions 200
+[debug] [2026-10-06T16:36:14.800Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions {"permissions":["firebase.projects.get","firebaseappcheck.appAttestConfig.get","firebaseappcheck.deviceCheckConfig.get","firebaseappcheck.playIntegrityConfig.get","firebaseappcheck.recaptchaEnterpriseConfig.get","firebaseappcheck.recaptchaV3Config.get"]}
+[info] Active Project: needmap-hackathon
+[debug] [2026-10-06T16:36:14.800Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:14.800Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:14.801Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/needmap-hackathon:searchApps pageSize=100
+[debug] [2026-10-06T16:36:15.050Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/needmap-hackathon:searchApps 200
+[debug] [2026-10-06T16:36:15.050Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/needmap-hackathon:searchApps {"apps":[{"name":"projects/needmap-hackathon/webApps/1:385002157682:web:3296ba12f9bd711ae0f4eb","displayName":"NeedMap Community","platform":"WEB","appId":"1:385002157682:web:3296ba12f9bd711ae0f4eb","namespace":"MzRhODBjOTMtYjQ3ZS00ZjgwLTk2OGYtNjU3YjdkMGQ0OTll","apiKeyId":"078669f5-d64a-41b0-8ecc-d3fae8bcfcdc","state":"ACTIVE","expireTime":"1970-01-01T00:00:00Z"}]}
+[debug] [2026-10-06T16:36:15.060Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:15.060Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:15.060Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon [none]
+[debug] [2026-10-06T16:36:15.220Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon 200
+[debug] [2026-10-06T16:36:15.220Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon {"projectNumber":"385002157682","projectId":"needmap-hackathon","lifecycleState":"ACTIVE","name":"needmap-hackathon","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-10-03T21:54:19.565Z"}
+[debug] [2026-10-06T16:36:15.223Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:15.223Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:15.223Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:15.223Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:15.223Z] >>> [apiv2][query] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/recaptchaEnterpriseConfig [none]
+[debug] [2026-10-06T16:36:15.225Z] >>> [apiv2][query] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/recaptchaV3Config [none]
+[debug] [2026-10-06T16:36:15.706Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T16:36:15.708Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase appcheck:debugtokens:list 1:385002157682:web:3296ba12f9bd711ae0f4eb --project needmap-hackathon
+[debug] [2026-10-06T16:36:15.708Z] CLI Version:   15.32.1
+[debug] [2026-10-06T16:36:15.708Z] Platform:      darwin
+[debug] [2026-10-06T16:36:15.708Z] Node Version:  v24.21.0
+[debug] [2026-10-06T16:36:15.708Z] Detected Agent: codex_cli
+[debug] [2026-10-06T16:36:15.708Z] Time:          Tue Oct 06 2026 09:36:15 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T16:36:15.708Z] ----------------------------------------------------------------------
+[debug] 
+[error] 
+[error] Error: Too many arguments. Run firebase help appcheck:debugtokens:list for usage instructions
+[debug] [2026-10-06T16:36:15.977Z] <<< [apiv2][status] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/recaptchaEnterpriseConfig 200
+[debug] [2026-10-06T16:36:15.977Z] <<< [apiv2][body] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/recaptchaEnterpriseConfig {"name":"projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/recaptchaEnterpriseConfig","tokenTtl":"3600s","riskAnalysis":{"minValidScore":0.5}}
+[debug] [2026-10-06T16:36:16.065Z] <<< [apiv2][status] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/recaptchaV3Config 200
+[debug] [2026-10-06T16:36:16.066Z] <<< [apiv2][body] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/recaptchaV3Config {"name":"projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/recaptchaV3Config","tokenTtl":"86400s","minValidScore":0.5}
+[info] App: 1:385002157682:web:3296ba12f9bd711ae0f4eb (WEB)
+[info] ┌──────────────────────┬────────────┬───────────┬────────────────┐
+│ Provider             │ Configured │ Token TTL │ Settings       │
+├──────────────────────┼────────────┼───────────┼────────────────┤
+│ recaptcha-enterprise │ No         │ 1h        │ min score: 0.5 │
+├──────────────────────┼────────────┼───────────┼────────────────┤
+│ recaptcha-v3         │ No         │ 1d        │ min score: 0.5 │
+└──────────────────────┴────────────┴───────────┴────────────────┘
+[debug] [2026-10-06T16:36:25.599Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T16:36:25.602Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase help appcheck:debugtokens:list
+[debug] [2026-10-06T16:36:25.602Z] CLI Version:   15.32.1
+[debug] [2026-10-06T16:36:25.602Z] Platform:      darwin
+[debug] [2026-10-06T16:36:25.602Z] Node Version:  v24.21.0
+[debug] [2026-10-06T16:36:25.602Z] Detected Agent: codex_cli
+[debug] [2026-10-06T16:36:25.602Z] Time:          Tue Oct 06 2026 09:36:25 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T16:36:25.602Z] ----------------------------------------------------------------------
+[debug] 
+[info]  Privacy Policy: https://firebase.google.com/support/privacy
+[info] 
+[debug] [2026-10-06T16:36:25.753Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T16:36:25.722Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T16:36:25.760Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase help appcheck:debugtokens:create
+[debug] [2026-10-06T16:36:25.760Z] CLI Version:   15.32.1
+[debug] [2026-10-06T16:36:25.760Z] Platform:      darwin
+[debug] [2026-10-06T16:36:25.760Z] Node Version:  v24.21.0
+[debug] [2026-10-06T16:36:25.760Z] Detected Agent: codex_cli
+[debug] [2026-10-06T16:36:25.760Z] Time:          Tue Oct 06 2026 09:36:25 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T16:36:25.760Z] ----------------------------------------------------------------------
+[debug] 
+[info]  Privacy Policy: https://firebase.google.com/support/privacy
+[info] 
+[debug] [2026-10-06T16:36:25.727Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase help appcheck:services:set
+[debug] [2026-10-06T16:36:25.728Z] CLI Version:   15.32.1
+[debug] [2026-10-06T16:36:25.728Z] Platform:      darwin
+[debug] [2026-10-06T16:36:25.729Z] Node Version:  v24.21.0
+[debug] [2026-10-06T16:36:25.729Z] Detected Agent: codex_cli
+[debug] [2026-10-06T16:36:25.729Z] Time:          Tue Oct 06 2026 09:36:25 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T16:36:25.729Z] ----------------------------------------------------------------------
+[debug] 
+[info]  Privacy Policy: https://firebase.google.com/support/privacy
+[info] 
+[debug] [2026-10-06T16:36:35.764Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T16:36:35.766Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase appcheck:debugtokens:list --app 1:385002157682:web:3296ba12f9bd711ae0f4eb --project needmap-hackathon
+[debug] [2026-10-06T16:36:35.766Z] CLI Version:   15.32.1
+[debug] [2026-10-06T16:36:35.766Z] Platform:      darwin
+[debug] [2026-10-06T16:36:35.766Z] Node Version:  v24.21.0
+[debug] [2026-10-06T16:36:35.766Z] Detected Agent: codex_cli
+[debug] [2026-10-06T16:36:35.766Z] Time:          Tue Oct 06 2026 09:36:35 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T16:36:35.766Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-06T16:36:35.771Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T16:36:35.771Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[info] Active Project: needmap-hackathon
+[debug] [2026-10-06T16:36:35.778Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:35.778Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:35.778Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon [none]
+[debug] [2026-10-06T16:36:35.950Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon 200
+[debug] [2026-10-06T16:36:35.950Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon {"projectNumber":"385002157682","projectId":"needmap-hackathon","lifecycleState":"ACTIVE","name":"needmap-hackathon","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-10-03T21:54:19.565Z"}
+[debug] [2026-10-06T16:36:35.952Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:35.952Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T16:36:35.952Z] >>> [apiv2][query] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/debugTokens 
+[debug] [2026-10-06T16:36:36.702Z] <<< [apiv2][status] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/debugTokens 200
+[debug] [2026-10-06T16:36:36.703Z] <<< [apiv2][body] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/debugTokens {}
+[info] No App Check debug tokens found.
+[debug] [2026-10-06T17:01:23.064Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T17:01:23.067Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase appcheck:services:set ailogic enforced --project needmap-hackathon --force
+[debug] [2026-10-06T17:01:23.068Z] CLI Version:   15.32.1
+[debug] [2026-10-06T17:01:23.068Z] Platform:      darwin
+[debug] [2026-10-06T17:01:23.068Z] Node Version:  v24.21.0
+[debug] [2026-10-06T17:01:23.068Z] Detected Agent: codex_cli
+[debug] [2026-10-06T17:01:23.068Z] Time:          Tue Oct 06 2026 10:01:23 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T17:01:23.068Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-06T17:01:23.075Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T17:01:23.075Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[debug] [2026-10-06T17:01:23.075Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T17:01:23.075Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[debug] [2026-10-06T17:01:23.075Z] [iam] checking project needmap-hackathon for permissions ["firebase.projects.get","firebaseappcheck.services.get","firebaseappcheck.services.update"]
+[debug] [2026-10-06T17:01:23.081Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:23.081Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:23.082Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions [none]
+[debug] [2026-10-06T17:01:23.082Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions  x-goog-user-project=needmap-hackathon
+[debug] [2026-10-06T17:01:23.083Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions {"permissions":["firebase.projects.get","firebaseappcheck.services.get","firebaseappcheck.services.update"]}
+[debug] [2026-10-06T17:01:23.482Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions 200
+[debug] [2026-10-06T17:01:23.482Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions {"permissions":["firebase.projects.get","firebaseappcheck.services.get","firebaseappcheck.services.update"]}
+[debug] [2026-10-06T17:01:23.482Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:23.483Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:23.483Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon [none]
+[debug] [2026-10-06T17:01:23.616Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon 200
+[debug] [2026-10-06T17:01:23.616Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon {"projectNumber":"385002157682","projectId":"needmap-hackathon","lifecycleState":"ACTIVE","name":"needmap-hackathon","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-10-03T21:54:19.565Z"}
+[debug] [2026-10-06T17:01:23.616Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:23.616Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:23.616Z] >>> [apiv2][query] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/services/firebaseml.googleapis.com [none]
+[debug] [2026-10-06T17:01:24.240Z] <<< [apiv2][status] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/services/firebaseml.googleapis.com 200
+[debug] [2026-10-06T17:01:24.240Z] <<< [apiv2][body] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/services/firebaseml.googleapis.com {"name":"projects/385002157682/services/firebaseml.googleapis.com","updateTime":"1970-01-01T00:00:00Z","etag":"\"KXGgKnvQgeRTWnc=\""}
+[debug] [2026-10-06T17:01:24.240Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:24.240Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:24.241Z] >>> [apiv2][query] PATCH https://firebaseappcheck.googleapis.com/v1/projects/385002157682/services/firebaseml.googleapis.com updateMask=enforcementMode
+[debug] [2026-10-06T17:01:24.241Z] >>> [apiv2][body] PATCH https://firebaseappcheck.googleapis.com/v1/projects/385002157682/services/firebaseml.googleapis.com {"enforcementMode":"ENFORCED"}
+[debug] [2026-10-06T17:01:24.715Z] <<< [apiv2][status] PATCH https://firebaseappcheck.googleapis.com/v1/projects/385002157682/services/firebaseml.googleapis.com 200
+[debug] [2026-10-06T17:01:24.715Z] <<< [apiv2][body] PATCH https://firebaseappcheck.googleapis.com/v1/projects/385002157682/services/firebaseml.googleapis.com {"name":"projects/385002157682/services/firebaseml.googleapis.com","enforcementMode":"ENFORCED","updateTime":"2026-10-06T17:01:24.680271Z","etag":"\"GBoRL4KQXxW3M9M=\""}
+[info] ✔  App Check for ailogic is now enforced. 
+[debug] [2026-10-06T17:01:33.843Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T17:01:33.845Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase appcheck:services:get ailogic --project needmap-hackathon
+[debug] [2026-10-06T17:01:33.846Z] CLI Version:   15.32.1
+[debug] [2026-10-06T17:01:33.846Z] Platform:      darwin
+[debug] [2026-10-06T17:01:33.846Z] Node Version:  v24.21.0
+[debug] [2026-10-06T17:01:33.846Z] Detected Agent: codex_cli
+[debug] [2026-10-06T17:01:33.846Z] Time:          Tue Oct 06 2026 10:01:33 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T17:01:33.846Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-06T17:01:33.851Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T17:01:33.851Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[debug] [2026-10-06T17:01:33.851Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T17:01:33.851Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[debug] [2026-10-06T17:01:33.851Z] [iam] checking project needmap-hackathon for permissions ["firebase.projects.get","firebaseappcheck.services.get"]
+[debug] [2026-10-06T17:01:33.857Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:33.857Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:33.858Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions [none]
+[debug] [2026-10-06T17:01:33.858Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions  x-goog-user-project=needmap-hackathon
+[debug] [2026-10-06T17:01:33.858Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions {"permissions":["firebase.projects.get","firebaseappcheck.services.get"]}
+[debug] [2026-10-06T17:01:34.182Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions 200
+[debug] [2026-10-06T17:01:34.182Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon:testIamPermissions {"permissions":["firebase.projects.get","firebaseappcheck.services.get"]}
+[debug] [2026-10-06T17:01:34.183Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:34.183Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:34.183Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon [none]
+[debug] [2026-10-06T17:01:34.318Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon 200
+[debug] [2026-10-06T17:01:34.319Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon {"projectNumber":"385002157682","projectId":"needmap-hackathon","lifecycleState":"ACTIVE","name":"needmap-hackathon","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-10-03T21:54:19.565Z"}
+[debug] [2026-10-06T17:01:34.319Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:34.319Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:34.319Z] >>> [apiv2][query] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/services/firebaseml.googleapis.com [none]
+[debug] [2026-10-06T17:01:34.960Z] <<< [apiv2][status] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/services/firebaseml.googleapis.com 200
+[debug] [2026-10-06T17:01:34.961Z] <<< [apiv2][body] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/services/firebaseml.googleapis.com {"name":"projects/385002157682/services/firebaseml.googleapis.com","enforcementMode":"ENFORCED","updateTime":"2026-10-06T17:01:24.680271Z","etag":"\"GBoRL4KQXxW3M9M=\""}
+[info] Service:            ailogic (Firebase AI Logic)
+[info] Enforcement:        Enforced
+[info] Replay protection:  Off
+[info] Last updated:       2026-10-06T17:01:24.680271Z
+[debug] [2026-10-06T17:01:36.508Z] ----------------------------------------------------------------------
+[debug] [2026-10-06T17:01:36.510Z] Command:       /usr/local/bin/node /opt/homebrew/bin/firebase appcheck:debugtokens:list --app 1:385002157682:web:3296ba12f9bd711ae0f4eb --project needmap-hackathon
+[debug] [2026-10-06T17:01:36.510Z] CLI Version:   15.32.1
+[debug] [2026-10-06T17:01:36.510Z] Platform:      darwin
+[debug] [2026-10-06T17:01:36.510Z] Node Version:  v24.21.0
+[debug] [2026-10-06T17:01:36.511Z] Detected Agent: codex_cli
+[debug] [2026-10-06T17:01:36.511Z] Time:          Tue Oct 06 2026 10:01:36 GMT-0700 (Pacific Daylight Time)
+[debug] [2026-10-06T17:01:36.511Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-10-06T17:01:36.516Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-10-06T17:01:36.516Z] > authorizing via signed-in user (rishabmsahu748@gmail.com)
+[info] Active Project: needmap-hackathon
+[debug] [2026-10-06T17:01:36.523Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:36.523Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:36.523Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon [none]
+[debug] [2026-10-06T17:01:36.793Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon 200
+[debug] [2026-10-06T17:01:36.793Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/needmap-hackathon {"projectNumber":"385002157682","projectId":"needmap-hackathon","lifecycleState":"ACTIVE","name":"needmap-hackathon","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-10-03T21:54:19.565Z"}
+[debug] [2026-10-06T17:01:36.795Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:36.795Z] Checked if tokens are valid: true, expires at: 1791308052860
+[debug] [2026-10-06T17:01:36.795Z] >>> [apiv2][query] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/debugTokens 
+[debug] [2026-10-06T17:01:37.584Z] <<< [apiv2][status] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/debugTokens 200
+[debug] [2026-10-06T17:01:37.584Z] <<< [apiv2][body] GET https://firebaseappcheck.googleapis.com/v1/projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/debugTokens {"debugTokens":[{"name":"projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/debugTokens/NDQwMGQwNTMtYjg3Ni00MzVhLWE5NTMtMWIxOWI4MzJmYjcz","displayName":"NeedMap localhost","updateTime":"2026-10-06T17:01:15.462591Z","etag":"\"FxLbS7LJtG2UjHM=\""}]}
+[info] ┌───────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬─────────────────────────────┐
+│ Display Name      │ Resource Name                                                                                                                     │ Update Time                 │
+├───────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼─────────────────────────────┤
+│ NeedMap localhost │ projects/385002157682/apps/1:385002157682:web:3296ba12f9bd711ae0f4eb/debugTokens/NDQwMGQwNTMtYjg3Ni00MzVhLWE5NTMtMWIxOWI4MzJmYjcz │ 2026-10-06T17:01:15.462591Z │
+└───────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴─────────────────────────────┘

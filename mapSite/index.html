@@ -9,23 +9,156 @@
   </head>
   <body>
     <header class="topbar">
-      <div>
+      <div class="brand-block">
         <p class="eyebrow">NeedMap dashboard</p>
         <h1>Community signals</h1>
       </div>
+      <nav class="view-switcher" aria-label="Dashboard sections">
+        <button class="view-tab active" type="button" data-view="map" aria-selected="true">Map</button>
+        <button class="view-tab" type="button" data-view="data" aria-selected="false">Data</button>
+      </nav>
       <div class="status-wrap">
         <span id="live-dot" class="live-dot" aria-hidden="true"></span>
         <span id="status" role="status" aria-live="polite">Connecting…</span>
       </div>
     </header>
 
-    <main>
+    <main id="map-view" class="site-view">
       <div id="map" aria-label="Map of community reports"></div>
+      <aside class="analysis-panel" aria-labelledby="analysis-title">
+        <p class="eyebrow">Placement analysis</p>
+        <h2 id="analysis-title">Recommended services</h2>
+        <p class="analysis-intro">
+          Verified region boundaries group the reports. Gemini evaluates the
+          need using urgency, rurality, density, and report summaries.
+        </p>
+        <button id="analyze-button" type="button" disabled>Analyze signals</button>
+        <div id="analysis-progress" class="analysis-progress" hidden aria-live="polite">
+          <div class="analysis-progress-track" aria-hidden="true"><span id="analysis-progress-bar"></span></div>
+          <p id="analysis-progress-label">Preparing grouped signals…</p>
+        </div>
+        <p id="analysis-status" class="analysis-status" role="status" aria-live="polite">
+          Waiting for reports…
+        </p>
+        <section id="generation-panel" class="generation-panel" hidden aria-label="Live Gemini decision summary">
+          <p class="generation-title">Live Gemini decision summary</p>
+          <p id="generation-text" class="generation-text" aria-live="polite"></p>
+        </section>
+        <div id="recommendations" class="recommendations"></div>
+        <p class="analysis-note">
+          Candidate locations require review of roads, parcels, zoning,
+          existing services, cost, and safety before use.
+        </p>
+        <details class="method-card">
+          <summary>How NeedMap makes this recommendation</summary>
+          <ol>
+            <li>Reports in the same category are grouped by a named administrative polygon, not a fixed radius.</li>
+            <li>Region size, place type, available population density, and rurality determine the geographic context.</li>
+            <li>Urgency is weighted locally: low = 1, medium = 2, high = 3.</li>
+            <li>A weighted geographic median proposes the candidate point and is constrained to the verified region shape.</li>
+            <li>Gemini receives the verified region facts plus grouped category, count, urgency, and summary text.</li>
+          </ol>
+          <p>It is decision support, not a final site selection. A human must confirm feasibility.</p>
+          <h3>Sources used</h3>
+          <ul>
+            <li>Community reports in the Firebase <code>incomingSignals</code> collection.</li>
+            <li><a href="https://firebase.google.com/docs/ai-logic/get-started?platform=web" target="_blank" rel="noreferrer">Firebase AI Logic</a> and <a href="https://firebase.google.com/docs/ai-logic/generate-text" target="_blank" rel="noreferrer">Gemini text generation</a>.</li>
+            <li><a href="https://leafletjs.com/" target="_blank" rel="noreferrer">Leaflet</a> with <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> map tiles.</li>
+            <li><a href="https://nominatim.org/" target="_blank" rel="noreferrer">OpenStreetMap Nominatim</a> for cached region names, boundaries, and available population tags, following its <a href="https://operations.osmfoundation.org/policies/nominatim/" target="_blank" rel="noreferrer">usage policy</a>.</li>
+          </ul>
+        </details>
+      </aside>
       <aside class="summary-card" aria-label="Map summary">
         <strong id="signal-count">0</strong>
-        <span>signals shown</span>
+        <span>reports in view</span>
       </aside>
     </main>
+
+    <section id="data-view" class="data-view site-view" aria-labelledby="data-title" hidden>
+      <div class="data-shell">
+        <header class="data-header">
+          <div>
+            <p class="eyebrow">All report data</p>
+            <h2 id="data-title">Report data by region</h2>
+            <p>Every valid report in Firebase, grouped into named geographic regions with their real boundary shapes.</p>
+          </div>
+          <button id="return-to-map" class="secondary-button" type="button">Return to map</button>
+        </header>
+
+        <div class="data-metrics" aria-label="All report data summary">
+          <article><strong id="data-report-count">0</strong><span>reports</span></article>
+          <article><strong id="data-region-count">0</strong><span>regions</span></article>
+          <article><strong id="data-high-count">0</strong><span>high urgency</span></article>
+          <article><strong id="data-category-count">0</strong><span>categories</span></article>
+        </div>
+
+        <section id="data-analysis" class="selection-analysis" aria-labelledby="data-analysis-title" aria-busy="false">
+          <header class="selection-analysis-header">
+            <div>
+              <p class="eyebrow">Automatic placement analysis</p>
+              <h2 id="data-analysis-title">What should go where</h2>
+              <p id="data-analysis-status" role="status" aria-live="polite">
+                Waiting for named regions and report data…
+              </p>
+            </div>
+            <span class="auto-analysis-badge"><span aria-hidden="true"></span>Runs automatically</span>
+          </header>
+
+          <div id="data-analysis-progress" class="data-analysis-progress" hidden>
+            <div class="data-analysis-progress-track" aria-hidden="true">
+              <span id="data-analysis-progress-bar"></span>
+            </div>
+            <p id="data-analysis-progress-label">Preparing regional candidates…</p>
+          </div>
+
+          <div id="data-analysis-overview" class="analysis-overview" hidden></div>
+          <div id="data-analysis-summary" class="analysis-summary-strip" hidden></div>
+          <div id="data-analysis-results" class="placement-briefs"></div>
+
+          <p class="analysis-method-note">
+            Candidate points use an urgency-weighted geographic median constrained to the verified region boundary.
+            Gemini identifies the service and organizes the decision evidence; every report citation below is resolved
+            back to the exact Firebase summary supplied to the model.
+          </p>
+        </section>
+
+        <div class="source-data-heading">
+          <div>
+            <p class="eyebrow">Source evidence</p>
+            <h2>Reports by region</h2>
+          </div>
+          <p>Search and filter the report records used by the dashboard.</p>
+        </div>
+
+        <div class="data-toolbar" aria-label="Filter report data">
+          <label>
+            <span>Search summaries</span>
+            <input id="data-search" type="search" placeholder="Search report text…" autocomplete="off" />
+          </label>
+          <label>
+            <span>Category</span>
+            <select id="data-category-filter">
+              <option value="all">All categories</option>
+            </select>
+          </label>
+          <label>
+            <span>Urgency</span>
+            <select id="data-severity-filter">
+              <option value="all">All urgency levels</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="data-scope-row">
+          <p id="data-scope-status" role="status" aria-live="polite">Waiting for reports…</p>
+          <p>Region lookups are cached and limited to one request per second under the <a href="https://operations.osmfoundation.org/policies/nominatim/" target="_blank" rel="noreferrer">Nominatim usage policy</a>.</p>
+        </div>
+        <div id="region-list" class="region-list"></div>
+      </div>
+    </section>
 
     <noscript>This map needs JavaScript to load Firebase reports.</noscript>
 
